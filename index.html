@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Kashish Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Kashish</h1>
+<p>BTech AI/ML Student</p>
+
+<h2>Student Grade Calculator</h2>
+
+<input type="number" id="m1" placeholder="Enter marks for subject 1">
+<input type="number" id="m2" placeholder="Enter marks for subject 2">
+<input type="number" id="m3" placeholder="Enter marks for subject 3">
+
+<button onclick="calculate()">Calculate</button>
+
+<h3 id="result"></h3>
+
+<h2>Skills</h2>
+<ul>
+<li>C</li>
+<li>C++</li>
+<li>Python</li>
+<li>HTML</li>
+<li>CSS</li>
+</ul>
+
+<h2>Interests</h2>
+<p>Photography | Animal Rescue | Volunteering</p>
+
+</div>
+
+<script>
+
+function calculate(){
+
+let m1 = Number(document.getElementById("m1").value)
+let m2 = Number(document.getElementById("m2").value)
+let m3 = Number(document.getElementById("m3").value)
+
+let total = m1 + m2 + m3
+let avg = total / 3
+let grade = ""
+
+if(avg >= 90) grade = "A"
+else if(avg >= 75) grade = "B"
+else if(avg >= 60) grade = "C"
+else if(avg >= 50) grade = "D"
+else grade = "Fail"
+
+document.getElementById("result").innerHTML =
+"Total: " + total + "<br>Average: " + avg + "<br>Grade: " + grade
+
+}
+
+</script>
+
+</body>
+</html>
